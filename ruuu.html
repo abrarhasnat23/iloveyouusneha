@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawaii Poem Animation</title>
+    <style>
+        body {
+            background-color: #ffebf0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #ff69b4;
+            text-align: center;
+            padding: 50px;
+        }
+        .line {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: write 1s forwards;
+            font-size: 1.5em;
+            transition: color 0.5s;
+        }
+        .line:hover {
+            color: #ff1493;
+        }
+        @keyframes write {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>I'm the Sun, and You're the Moon</h1>
+    <div id="poem">
+        <div class="line">We’ve never met, but I think about you.</div>
+        <div class="line">I wake up every day, and for some reason,</div>
+        <div class="line">I feel like you’re out there, somewhere, maybe thinking of me too.</div>
+        <div class="line">I try to shine a little brighter, but I’m not sure why,</div>
+        <div class="line">Maybe hoping you’ll notice, maybe hoping you’ll find me.</div>
+        <div class="line">I smile even though you’re not here.</div>
+        <div class="line">It feels like you’re close, even though I know you’re not.</div>
+        <div class="line">I don’t really understand it, but something in my chest feels full,</div>
+        <div class="line">Like there’s a space inside me that only you could fit into.</div>
+        <div class="line">I find myself imagining what it would be like—</div>
+        <div class="line">To sit with you, to laugh, to just be.</div>
+        <div class="line">We’re like two stars in different parts of the sky,</div>
+        <div class="line">Shining, but never in the same place.</div>
+        <div class="line">I wait, and I wish, and I wonder if you’re out there too.</div>
+        <div class="line">Maybe one day, we’ll finally meet and it’ll feel like home.</div>
+        <div class="line">But until then, I’ll hold on to this thought,</div>
+        <div class="line">That even if we never cross paths, I’ll still carry you with me.</div>
+        <div class="line">You’re the quiet thought that gets me through the day.</div>
+        <div class="line">Even if you’re not here, you’re still somehow with me.</div>
+    </div>
+    <script>
+        const lines = document.querySelectorAll('.line');
+        lines.forEach((line, index) => {
+            line.style.animationDelay = `${index * 0.6}s`;
+        });
+    </script>
+</body>
+</html>

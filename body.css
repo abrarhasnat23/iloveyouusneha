@@ -1,0 +1,29 @@
+body {
+    background-color: #e0f7fa;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00796b;
+    text-align: center;
+}
+
+.poem-container {
+    margin: 50px auto;
+    width: 80%;
+    border: 2px solid #00796b;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.line {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        font-style: italic;
+    }
+}
